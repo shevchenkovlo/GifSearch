@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GifList from './components/GifList';
+import SearchInput from './containers/SearchInputContainer'
+import ThemeSwitcher from "./containers/ThemeSwitcherContainer";
+import {Theme} from './reducers';
+import DownloadMore from "./containers/DownloadMoreContainer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface Props {
+    theme: Theme;
+    loading: boolean;
+    gifs: Array<any>;
+    onLoad: () => void;
+    query: string;
+    offset:number
+
 }
 
+const App = (props: Props) => {
+
+    const {onLoad} = props;
+
+    React.useEffect( () => {
+        onLoad();
+    }, [onLoad]);
+
+
+    return (
+        <div className={`app--${props.theme}`}>
+            <h1>Front education</h1>
+            <ThemeSwitcher/>
+            <SearchInput />
+            {props.loading ? (
+                <span>Loading</span>
+            ) : (
+                <GifList data={props.gifs} />
+            ) }
+            <DownloadMore />
+
+
+        </div>
+    );
+};
 export default App;

@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app--light{
+  background: white;
+}
+
+.app--dark{
+  background: black;
+}
+.image-container{
+
+}
+
+.containerGifs{
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image{
+
+  /*margin-left: 10px;*/
+  /*margin-right: 10px;*/
+
+}
+
+li {
+  list-style-type: none; /* Убираем маркеры */
+}
