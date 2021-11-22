@@ -1,0 +1,14 @@
+.gridList{
+  width: 100%;
+  height: 100%;
+}
+.ulRoot{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.image-container{
+  width: fit-content;
+  height: fit-content;
+}

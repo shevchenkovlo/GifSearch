@@ -71,6 +71,17 @@ export const searchGifs = () => (dispatch: Dispatch, getState:any) => {
         })
 }
 
+export const inputGifs = (query: string,offset:number) => (dispatch:Dispatch) => {
+    dispatch(setLoading(true));
+    gifService(query,offset).then((gifs) => {
+        console.log(gifs)
+        dispatch(setLoading(false));
+        dispatch(setGifs(gifs.data))
+        dispatch(setQuery(query));
+
+    })
+}
+
 const reducer = (state = initialState, action: {type: string, payload: any}) => {
     switch (action.type){
         case 'SWITCH_THEME':

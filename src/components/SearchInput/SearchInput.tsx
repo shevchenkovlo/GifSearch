@@ -1,4 +1,6 @@
 import React from "react";
+import TextField from '@material-ui/core/TextField';
+import './SearchInput.scss'
 
 interface Props{
     onChange: (value:string) => void;
@@ -21,8 +23,8 @@ const SearchInput = (props:Props) => {
 
 
     return (
-        <form>
-            <input ref={inputRef} type="search" onChange={handleChange}/>
+        <form className="formSearch">
+            <TextField id="standard-basic" className="inputSearch" label="Какие гифки хотите найти?" ref={inputRef} type="search" onChange={handleChange}/>
         </form>
     )
 }

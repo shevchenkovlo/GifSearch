@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import {searchGifs, State} from "../reducers";
+import {inputGifs, State} from "../reducers";
 import App from "../App";
 import {Dispatch} from "redux";
 
@@ -14,7 +14,7 @@ const mapStateToProps = (state: State) => ({
 const mapDispatchToProps = (dispatch: Dispatch) => ({
     onLoad: () => {
         // @ts-ignore
-        dispatch(searchGifs('cats'))
+        dispatch(inputGifs('cats'))
     }
 })
 

@@ -1,8 +1,6 @@
 import React from 'react';
-
-
-
-
+import Button from '@material-ui/core/Button';
+import './DownloadMore.scss';
 
 interface Props {
     query: string
@@ -12,18 +10,15 @@ interface Props {
 
 const DownloadMore = (props: Props) => {
 
-
     return (
-        <button type="button" onClick={() => {
 
+        <Button className="buttonMore" variant="contained" color="primary" type="button" onClick={() => {
                 props.onClick(props.query,20)
-
         }}>
             Загрузить еще
-        </button>
+        </Button>
+
     )
-
-
 };
 
 export default DownloadMore;

@@ -1,5 +1,5 @@
 import React from 'react';
-import GifList from './components/GifList';
+import GifList from './components/GifList/GifList';
 import SearchInput from './containers/SearchInputContainer'
 import ThemeSwitcher from "./containers/ThemeSwitcherContainer";
 import {Theme} from './reducers';
@@ -26,6 +26,7 @@ const App = (props: Props) => {
 
     return (
         <div className={`app--${props.theme}`}>
+            <div className="main-container">
             <h1>Front education</h1>
             <ThemeSwitcher/>
             <SearchInput />
@@ -35,7 +36,7 @@ const App = (props: Props) => {
                 <GifList data={props.gifs} />
             ) }
             <DownloadMore />
-
+            </div>
 
         </div>
     );

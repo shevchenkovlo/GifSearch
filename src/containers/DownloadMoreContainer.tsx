@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import {Dispatch} from "redux";
 import {State, setOffset, searchGifs,setQuery} from "../reducers";
-import DownloadMore from "../components/DownloadMore";
+import DownloadMore from "../components/DownloadMore/DownloadMore";
 
 
 const mapStateToProps = (state: State) => ({
