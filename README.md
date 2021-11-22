@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Приложение для поиска гивок с ипользованием React hooks и Redux
 
 ## Available Scripts
 
